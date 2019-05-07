@@ -1,0 +1,17 @@
+html {
+    font-size: 62.5%;
+    width: 62.5%;
+    height: 62.5%;
+    text-rendering: optimizeLegibility;
+}
+
+header {
+    width: 98rem;
+    height: 10rem;
+    margin: 1rem;
+    background: #252627;
+}
+
+body {
+
+}
