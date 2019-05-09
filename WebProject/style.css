@@ -7,9 +7,14 @@ html {
 
 body {
     width: 100%;
+    min-height: 100vh;
     /*height: 165vw;*/
     margin: 0;
     background: #F7F7FF;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 ul.menu-items {
@@ -27,32 +32,69 @@ header {
     background: #252627;
     position: relative;
     float: left;
+    border-bottom: #CE9A00 solid;
+    color: #F7F7FF;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
-.logo{
+.logo {
     width: 15rem;
     height: 15rem;
-    margin: 3rem;
-    float:left;
+    margin: 3rem 0;
+
+    -webkit-filter: drop-shadow(.3rem .3rem .2rem rgba(0, 0, 0, .7));
+    filter: drop-shadow(.3rem .3rem .2rem rgba(0, 0, 0, .7));
 }
 
-.name{
-    font-size: 2.2rem;
-    color: #F7F7FF;
-    float: left;
+.name {
+    margin: .3rem;
+    font-size: 4rem;
+    text-align: left;
+}
+
+.logo, .name-slogan {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.slogan {
+    margin: .3rem;
+    font-size: 1.4rem;
+    display: block;
+    text-align: center;
+}
+
+.phones {
+    margin: 3rem;
+}
+
+.phone{
+    font-size: 4rem;
+}
+
+.feedback {
+    font-size: 1.4rem;
+    text-align: right;
+    margin: 0 1rem;
+    border-bottom: .2rem dashed #ea3a5a;
+    width:9.5rem;
 }
 
 .menu {
     width: 100%;
     height: 8rem;
-    background: #CE9A00;
+    background: #252627;
+    color: #F7F7FF;
     float: left;
     font-size: 2.2rem;
     position: relative;
+
+    -webkit-box-shadow: inset 0 .7rem 1rem black;
+    -moz-box-shadow: inset 0 .7rem 1rem black;
+    box-shadow: inset 0 .7rem 1rem black;
 }
 
 .menu-items {
@@ -66,14 +108,14 @@ header {
 }
 
 .main {
-    height: 100rem;
-    float: left;
+    flex-grow: 2;
 }
 
 footer {
     width: 100%;
-    height: 15rem;
+    min-height: 15rem;
+
     background: #070600;
-    position: relative;
-    float: left;
+    display: block;
+    flex-grow: 1;
 }
