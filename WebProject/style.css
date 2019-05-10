@@ -133,7 +133,9 @@ footer {
 }
 
 .underlined{
-    border-bottom: .1rem dashed #ea3a5a;
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    text-decoration-color: #ea3a5a;
 }
 
 .footer-company>p,.footer-menu>li,.developer-info>p{
