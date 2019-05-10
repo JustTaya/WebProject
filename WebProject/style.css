@@ -79,7 +79,6 @@ header {
     font-size: 1.4rem;
     text-align: right;
     margin: 0 1rem;
-    border-bottom: .2rem dashed #ea3a5a;
     width:9.5rem;
 }
 
@@ -114,8 +113,33 @@ header {
 footer {
     width: 100%;
     min-height: 15rem;
+    color: #F7F7FF;
+    font-size: 1.4rem;
+    padding:3rem 0;
 
     background: #070600;
-    display: block;
     flex-grow: 1;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer-company{
+    text-align: left;
+}
+
+.footer-menu{
+    text-align: left;
+}
+
+.underlined{
+    border-bottom: .1rem dashed #ea3a5a;
+}
+
+.footer-company>p,.footer-menu>li,.developer-info>p{
+    margin: 1rem;
+}
+
+.footer-menu{
+    list-style: none;
 }
