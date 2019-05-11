@@ -165,6 +165,12 @@ footer {
     text-decoration-color: #ea3a5a;
 }
 
+.underlined:hover{
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: #ea3a5a;
+}
+
 .footer-company>p,.footer-menu>li,.developer-info>p{
     margin: 1rem;
 }
