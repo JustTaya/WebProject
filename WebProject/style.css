@@ -103,8 +103,7 @@ header {
 }
 
 .menu-item {
-    margin: .1rem;
-    padding: 0 2rem;
+    padding: .6rem;
     position: relative;
 }
 
@@ -140,6 +139,7 @@ footer {
     color: #F7F7FF;
     font-size: 1.4rem;
     padding: 3rem 0;
+    border-top: .3rem solid #ea3a5a;
 
     background: #070600;
     flex-grow: 1;
@@ -260,8 +260,22 @@ footer {
     padding: .5rem;
     margin: 1.5rem;
     text-align: center;
+    background: #CE9A00;
 }
 
-.footer{
+.footer {
     border-top: .3rem solid #ea3a5a;
+    margin: 2rem 3rem;
+    font-size: 1.4rem;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.footer> p {
+
+}
+
+.material-icons {
+    margin-left: 1rem;
 }
