@@ -21,7 +21,7 @@ ul.menu-items {
     list-style: none;
 }
 
-.menu-item:hover{
+.menu-item:hover {
     animation-name: hoverUnderline;
 }
 
@@ -75,7 +75,7 @@ header {
     margin: 3rem;
 }
 
-.phone{
+.phone {
     font-size: 4rem;
 }
 
@@ -83,7 +83,7 @@ header {
     font-size: 1.4rem;
     text-align: right;
     margin: 0 1rem;
-    width:9.5rem;
+    width: 9.5rem;
 }
 
 .menu {
@@ -111,7 +111,7 @@ header {
     position: relative;
 }
 
-.menu-item:before{
+.menu-item:before {
     content: "";
     position: absolute;
     width: 100%;
@@ -127,7 +127,7 @@ header {
 }
 
 
-.menu-item:hover:before{
+.menu-item:hover:before {
     visibility: visible;
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
@@ -142,7 +142,7 @@ footer {
     min-height: 15rem;
     color: #F7F7FF;
     font-size: 1.4rem;
-    padding:3rem 0;
+    padding: 3rem 0;
 
     background: #070600;
     flex-grow: 1;
@@ -151,30 +151,88 @@ footer {
     justify-content: space-evenly;
 }
 
-.footer-company{
+.footer-company {
     text-align: left;
 }
 
-.footer-menu{
+.footer-menu {
     text-align: left;
 }
 
-.underlined{
+.underlined {
     text-decoration-line: underline;
     text-decoration-style: dashed;
     text-decoration-color: #ea3a5a;
 }
 
-.underlined:hover{
+.underlined:hover {
     text-decoration-line: underline;
     text-decoration-style: solid;
     text-decoration-color: #ea3a5a;
 }
 
-.footer-company>p,.footer-menu>li,.developer-info>p{
+.footer-company > p, .footer-menu > li, .developer-info > p {
     margin: 1rem;
 }
 
-.footer-menu{
+.footer-menu {
     list-style: none;
+}
+
+.path {
+    margin-left: 2rem;
+    font-size: 1.4rem;
+}
+
+.path-element {
+    background: #CE9A00;
+    height: 3rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    float: left;
+    position: relative;
+    text-align: center;
+    margin: 1rem 1.5rem;
+}
+
+.path-element::before {
+    content: '';
+    border-right: 0;
+    border-left: 2rem solid transparent;
+    border-top: 2.02679rem solid #CE9A00;
+    border-bottom: 2.02679rem solid #CE9A00;
+    position: absolute;
+    right: 100%;
+    top: 0;
+}
+
+.path-element::after {
+    content: '';
+    border: 2.02679rem solid transparent;
+    border-left: 2.02679rem solid #CE9A00;
+    display: block;
+    width: 0;
+    height: 0;
+    left: 100%;
+    bottom: 0;
+    position: absolute;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.left-block{
+    background: #CE9A00;
+    width: 30%;
+    height: 10rem;
+}
+
+.center-block{
+    background: #ea3a5a;
+    width: 70%;
+    height: 10rem;
+
 }
