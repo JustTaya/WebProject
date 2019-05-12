@@ -21,9 +21,6 @@ ul.menu-items {
     list-style: none;
 }
 
-.menu-item:hover {
-    animation-name: hoverUnderline;
-}
 
 li + li {
     border-left: .3rem solid #070600;
@@ -223,35 +220,43 @@ footer {
     flex-flow: row wrap;
 }
 
-.left-block{
+.left-block {
     background: #CE9A00;
     width: 30%;
     font-size: 1.4rem;
     border: 0;
 }
 
-.left-block>ul {
+.left-block > ul {
     list-style: none;
 }
 
-.left-block>ul>li{
+.left-block > ul > li {
     border: 0;
 }
 
-.sub-menu>ul{
+.sub-menu > ul {
     list-style: circle;
 }
 
-.sub-menu>li{
+.sub-menu > li {
     border: 0;
 }
 
-.center-block{
+.center-block {
     background: #ea3a5a;
     width: 70%;
-    height: 10rem;
+}
 
+#container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: stretch;
+}
+
+.product {
+    width: 25rem;
+    height: 40rem;
+    background: #CE9A00;
 }
