@@ -220,14 +220,30 @@ footer {
 
 .main {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-flow: row wrap;
 }
 
 .left-block{
     background: #CE9A00;
     width: 30%;
-    height: 10rem;
+    font-size: 1.4rem;
+    border: 0;
+}
+
+.left-block>ul {
+    list-style: none;
+}
+
+.left-block>ul>li{
+    border: 0;
+}
+
+.sub-menu>ul{
+    list-style: circle;
+}
+
+.sub-menu>li{
+    border: 0;
 }
 
 .center-block{
@@ -235,4 +251,7 @@ footer {
     width: 70%;
     height: 10rem;
 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
