@@ -221,7 +221,6 @@ footer {
 }
 
 .left-block {
-    background: #CE9A00;
     width: 30%;
     font-size: 1.4rem;
     border: 0;
@@ -244,7 +243,6 @@ footer {
 }
 
 .center-block {
-    background: #ea3a5a;
     width: 70%;
 }
 
@@ -253,10 +251,17 @@ footer {
     flex-flow: row wrap;
     justify-content: flex-start;
     align-content: stretch;
+    padding: 2rem;
 }
 
 .product {
-    width: 25rem;
-    height: 40rem;
-    background: #CE9A00;
+    width: 24rem;
+    height: 35rem;
+    padding: .5rem;
+    margin: 1.5rem;
+    text-align: center;
+}
+
+.footer{
+    border-top: .3rem solid #ea3a5a;
 }
