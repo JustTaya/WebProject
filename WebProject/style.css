@@ -16,10 +16,18 @@ body {
     /*height: 165vw;*/
     margin: 0;
     background: #F7F7FF;
+    display: flex;
+    flex-direction: column;
+}
+
+.mid {
+    width:120rem;
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
 }
 
 ul.menu-items {
@@ -109,10 +117,11 @@ header {
 .menu-items {
     display: flex;
     justify-content: center;
+    vertical-align: middle !important;
 }
 
 .menu-item, #hidden-menu > span {
-    padding: .6rem;
+    padding: 1rem .7rem;
     position: relative;
 }
 
@@ -131,8 +140,16 @@ header {
     transition: all 0.3s ease-in-out 0s;
 }
 
+.menu-items > li:hover .material-icons,
+#hidden-menu:hover .material-icons
+ {
+    transition: color .3s;
+    color: #ea3a5a;
+}
 
-.menu-item:hover:before, #hidden-menu > span:hover:before {
+.menu-items > li:hover .menu-item:before,
+#hidden-menu:hover .menu-item:before
+{
     visibility: visible;
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
@@ -226,13 +243,14 @@ footer {
 
 .main {
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .left-block {
-    width: 30%;
     font-size: 1.4rem;
     border: 0;
+    width: 30rem;
 }
 
 .left-block > ul {
@@ -243,16 +261,33 @@ footer {
     border: 0;
 }
 
-.sub-menu > ul {
+.left-block > ul > li:hover {
+    transition: color 0.3s;
+    color: #ea3a5a;
     list-style: circle;
+
+}
+
+.left-block > ul:hover  .sub-menu{
+    color: #070600;
+}
+
+.sub-menu {
+    list-style: none;
 }
 
 .sub-menu > li {
     border: 0;
 }
 
+.sub-menu > li:hover {
+    transition: color 0.3s;
+    color: #ea3a5a;
+    list-style: circle;
+}
+
 .center-block {
-    width: 70%;
+    width: 110rem;
 }
 
 #container {
@@ -281,6 +316,8 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-self: flex-end;
+    justify-self: flex-end;
 }
 
 .footer > div {
@@ -293,26 +330,27 @@ footer {
 
 @media screen and (max-width: 900px) {
 
-    .main{
+    .main,.mid {
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-content: center;
     }
 
-    .left-block{
-        width: 100%;
+
+    .left-block {
         order: 2;
+        align-self: center;
     }
 
-    .center-block{
+    .center-block {
         width: 100%;
         order: 1;
-        justify-content: center;
     }
 
-    .footer{
-        order:3;
+    .footer {
+        order: 3;
     }
 
     #hidden-menu {
