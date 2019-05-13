@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "PT Sans";
+    src: url("https://fonts.googleapis.com/css?family=PT+Sans");
+}
+
 html {
     width: 100%;
     font-size: 62.5%;
@@ -267,13 +272,15 @@ footer {
     border-top: .3rem solid #ea3a5a;
     margin: 2rem 3rem;
     font-size: 1.4rem;
+    text-indent: 2rem;
 
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
 }
 
-.footer> p {
-
+.footer> div {
+    width: 45%;
 }
 
 .material-icons {
