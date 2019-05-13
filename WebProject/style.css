@@ -111,12 +111,12 @@ header {
     justify-content: center;
 }
 
-.menu-item {
+.menu-item, #hidden-menu > span {
     padding: .6rem;
     position: relative;
 }
 
-.menu-item:before {
+.menu-item:before, #hidden-menu > span:before {
     content: "";
     position: absolute;
     width: 100%;
@@ -132,7 +132,7 @@ header {
 }
 
 
-.menu-item:hover:before {
+.menu-item:hover:before, #hidden-menu > span:hover:before {
     visibility: visible;
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
@@ -293,6 +293,28 @@ footer {
 
 @media screen and (max-width: 900px) {
 
+    .main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .left-block{
+        width: 100%;
+        order: 2;
+    }
+
+    .center-block{
+        width: 100%;
+        order: 1;
+        justify-content: center;
+    }
+
+    .footer{
+        order:3;
+    }
+
     #hidden-menu {
         display: block;
         position: relative;
@@ -303,12 +325,14 @@ footer {
         display: none;
     }
 
-    .menu{
+    .menu {
         display: flex;
         justify-content: center;
     }
 
-    .phones{
+    .phones {
         display: none;
     }
+
+
 }
