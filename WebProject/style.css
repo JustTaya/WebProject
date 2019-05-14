@@ -1,12 +1,6 @@
-@font-face {
-    font-family: "PT Sans";
-    src: url("https://fonts.googleapis.com/css?family=PT+Sans");
-}
-
 html {
     width: 100%;
     font-size: 62.5%;
-    font-family: "PT Sans", serif;
     text-rendering: optimizeLegibility;
 }
 
@@ -18,6 +12,7 @@ body {
     background: #F7F7FF;
     display: flex;
     flex-direction: column;
+    font-family: 'Google Sans', sans-serif;
 }
 
 .mid {
@@ -91,9 +86,9 @@ header {
 
 .feedback {
     font-size: 1.4rem;
-    text-align: right;
+    text-align: left;
     margin: 0 1rem;
-    width: 9.5rem;
+
 }
 
 #hidden-menu {
@@ -153,30 +148,38 @@ header {
     transform: scaleX(1);
 }
 
-.left-menu li{
-    color: #CE9A00;
+.left-menu li {
+    color: #666;
+    z-index: 5;
+    margin: .3rem;
 }
 
-.left-menu li:before:hover{
-    visibility: visible;
+.left-menu li:before {
+    content: "";
+    width: 10rem;
+    height: 2rem;
+    position: absolute;
+    z-index: -1;
+    background: #CE9A00;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+
+}
+
+.left-menu li:hover:before {
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
     background: #ea3a5a;
 }
 
-.left-menu li:before{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background: #ea3a5a;
-    visibility: hidden;
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
+.left-menu li:hover {
+    color: #252627;
 }
 
 .main {
@@ -240,14 +243,17 @@ footer {
     position: relative;
     text-align: center;
     margin: 1rem 1.5rem;
+
+    border-left: #CE9A00 solid .05rem;
+    border-right: #CE9A00 solid .05rem;
 }
 
 .path-element::before {
     content: '';
     border-right: 0;
     border-left: 2rem solid transparent;
-    border-top: 2.02679rem solid #CE9A00;
-    border-bottom: 2.02679rem solid #CE9A00;
+    border-top: 2rem solid #CE9A00;
+    border-bottom: 2rem solid #CE9A00;
     position: absolute;
     right: 100%;
     top: 0;
@@ -255,8 +261,8 @@ footer {
 
 .path-element::after {
     content: '';
-    border: 2.02679rem solid transparent;
-    border-left: 2.02679rem solid #CE9A00;
+    border: 2rem solid transparent;
+    border-left: 2rem solid #CE9A00;
     display: block;
     width: 0;
     height: 0;
@@ -275,7 +281,7 @@ footer {
     font-size: 1.4rem;
     border: 0;
     width: 30rem;
-    background: #eee;
+    z-index: 1;
 }
 
 .left-block > ul {
@@ -285,7 +291,6 @@ footer {
 .left-block > ul > li {
     border: 0;
 }
-
 
 
 .sub-menu {
@@ -309,8 +314,8 @@ footer {
     padding: 2rem;
 }
 
-.hidden{
-   visibility: hidden;
+.hidden {
+    visibility: hidden;
 }
 
 .product {
@@ -320,6 +325,21 @@ footer {
     margin: 1.5rem;
     text-align: center;
     background: #CE9A00;
+    -webkit-box-shadow: 0 .3rem .3rem #000;
+    -moz-box-shadow: 0 .3rem .3rem #000;
+    box-shadow: 0 .3rem .3rem #000;
+}
+
+.product:hover{
+    -webkit-box-shadow: 0 .2rem .2rem #222;
+    -moz-box-shadow: 0 .2rem .2rem #222;
+    box-shadow: 0 .2rem .2rem #222;
+}
+
+.product:active{
+    -webkit-box-shadow: 0 0 0;
+    -moz-box-shadow: 0 0 0;
+    box-shadow: 0 0 0;
 }
 
 .footer {
@@ -332,9 +352,9 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-self:center ;
+    align-self: center;
     justify-self: center;
-    shrink:1;
+    shrink: 1;
 
     margin-left: 10%;
 }
@@ -377,7 +397,7 @@ footer {
         margin: 0;
     }
 
-    .footer>div{
+    .footer > div {
         width: 80%;
         padding: 0 10%;
         justify-self: center;
@@ -405,14 +425,14 @@ footer {
 
 }
 
-@media screen and (max-width: 700px){
-    .hidden{
+@media screen and (max-width: 700px) {
+    .hidden {
         display: none;
     }
 }
 
 @media screen and (min-width: 900px) and (max-width: 1000px) {
-    .hidden{
+    .hidden {
         display: none;
     }
 }
