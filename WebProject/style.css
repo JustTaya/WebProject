@@ -451,7 +451,7 @@ footer {
     background: #252627;
     color: #ea3a5a;
     width: 100vw;
-    padding 1rem;
+    padding: 1rem;
     text-align: center;
 }
 
@@ -462,7 +462,7 @@ footer {
     background: #252627;
     color: #ea3a5a;
     width: 100vw;
-    padding 1rem;
+    padding: 1rem;
     text-align: center;
 }
 
@@ -473,7 +473,7 @@ footer {
     background: #252627;
     color: #ea3a5a;
     width: 100vw;
-    padding 1rem;
+    padding: 1rem;
     text-align: center;
 }
 
@@ -486,14 +486,12 @@ footer {
     width: 100vw;
     height: 100vh;
     background: #000;
-    display: inline-block;
+    display: none;
     transition: background .25s ease-in-out;
     -moz-transition: background .25s ease-in-out;
     -webkit-transition: background .25s ease-in-out;
     z-index: 2;
     opacity: .5;
-
-    display: none;
 }
 
 #feedback-form {
@@ -515,12 +513,10 @@ footer {
     font-size: 1.4rem;
     font-family: 'Google Sans', sans-serif;
 
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-evenly;
     align-content: center;
-
-    display: none;
 }
 
 #feedback-form:hover, .button:hover {
