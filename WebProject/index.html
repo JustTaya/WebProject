@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     <link rel="stylesheet" href="http://tools.tochanenko.com/googlesans.css">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
 <header>
@@ -22,7 +21,7 @@
     <div class="phones">
         <div class="phone">+7(499)777-77-77</div>
         <div class="phone">+7(499)777-77-77</div>
-        <div class="feedback underlined">Обратная связь</div>
+        <div id="feedback-button" class="feedback underlined">Обратная связь</div>
     </div>
 </header>
 <div class="menu">
@@ -65,6 +64,25 @@
         </li>
     </ul>
 </div>
+<!--
+<ul id="hidden-menu-items">
+    <li>
+        <span class="menu-item">Главная</span>
+    </li>
+    <li>
+        <span class="menu-item">Каталог</span>
+    </li>
+    <li>
+        <span class="menu-item">Доставка и оплата</span>
+    </li>
+    <li>
+        <span class="menu-item">Прайс-лист</span>
+    </li>
+    <li>
+        <span class="menu-item">Контакты</span>
+    </li>
+</ul>
+-->
 <div class="mid">
     <div class="slider"></div>
     <div class="path">
@@ -153,5 +171,20 @@
         <p>Таисия Величко</p>
     </div>
 </footer>
+<div id="fade"></div>
+<form id="feedback-form">
+    <h1>Обратная связь</h1>
+    <label for="name">Ваше имя</label>
+    <input placeholder="Name: >4 letters" type="text" id="name" required minlength="4">
+    <label for="phone">Телефон</label>
+    <input placeholder="Format: 095-777-7777" type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+    <label for="email">Email</label>
+    <input placeholder="mail@mail.mail" type="email" id="email">
+    <label for="message">Сообщение</label>
+    <textarea id="message"></textarea>
+    <div class="button" id="submit-button">Отправить</div>
+</form>
 </body>
+<script src="script.js"></script>
+
 </html>
