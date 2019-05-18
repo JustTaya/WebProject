@@ -8,7 +8,7 @@ document.write(`<header>
     </div>
     <div class="phones">
         <div class="phone">+7(499)777-77-77</div>
-        <div class="phone">+7(499)777-77-77</div>
+        <div class="phone">+7(499)777-77-78</div>
         <div id="feedback-button" class="feedback underlined">Обратная связь</div>
     </div>
 </header>
