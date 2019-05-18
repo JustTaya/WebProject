@@ -116,15 +116,59 @@
                 <li>Одежда</li>
                 <li>Недвижимость</li>
             </ul>
+
+            <ul id="slide-top-menu">
+                <li>
+                    <i class="material-icons">home</i>
+                    Главная
+                </li>
+                <li>
+                    <i class="material-icons">view_module</i>
+                    Каталог
+                </li>
+                <li>
+                    <i class="material-icons">credit_card</i>
+                    Доставка и оплата
+                </li>
+                <li>
+                    <i class="material-icons">account_balance_wallet</i>
+                    Прайс-лист
+                </li>
+                <li>
+                    <i class="material-icons">person</i>
+                    Контакты
+                </li>
+                <li id="mobile-feedback">
+                    Оставить отзыв
+                </li>
+            </ul>
+
+            <div class="mobile-nav">
+            <div id="side-opener"><i class="material-icons">chrome_reader_mode</i></div>
+            <div id="menu-opener">Menu</div>
+        </div>
+
+            <div id="menu-fade"></div>
+            <div id="left-fade"></div>
         </div>
         <div class="center-block">
             <div id="container">
-                <div class="product"></div>
+                <div class="product">
+                </div>
                 <div class="product"></div>
                 <div class="product"></div>
                 <div class="product"></div>
                 <div class="product hidden"></div>
                 <div class="product hidden"></div>
+            </div>
+            <div id="pages">
+                <span class="current">1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+                <span>7</span>
             </div>
         </div>
     </div>
@@ -185,9 +229,9 @@
 <form id="feedback-form">
     <h1>Обратная связь</h1>
     <label for="name">Ваше имя</label>
-    <input placeholder="Name: >4 letters" type="text" id="name" minlength="4" required>
+    <input placeholder="Name: >4 letters" type="text" id="name" minlength="4">
     <label for="phone">Телефон</label>
-    <input placeholder="Format: 095-777-7777" type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+    <input placeholder="Format: 095-777-7777" type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
     <label for="email">Email</label>
     <input placeholder="mail@mail.mail" type="email" id="email">
     <label for="message">Сообщение</label>
@@ -196,5 +240,4 @@
 </form>
 </body>
 <script src="script.js"></script>
-
 </html>

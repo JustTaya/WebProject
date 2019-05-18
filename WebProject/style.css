@@ -20,8 +20,7 @@ body {
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
+    justify-content: space-evenly;
     align-self: center;
 }
 
@@ -107,17 +106,29 @@ header {
     -webkit-box-shadow: inset 0 .7rem 1rem #000;
     -moz-box-shadow: inset 0 .7rem 1rem #000;
     box-shadow: inset 0 .7rem 1rem #000;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
 }
 
 .menu-items {
     display: flex;
     justify-content: center;
+    align-content: center;
     vertical-align: middle !important;
 }
 
+.menu-items li{
+    height: 2rem;
+    align-self: center;
+}
+
 .menu-item, #hidden-menu > span {
-    padding: 1rem .7rem;
+    padding: 0 .7rem;
     position: relative;
+    height: 2rem;
 }
 
 .menu-item:before, #hidden-menu > span:before {
@@ -533,6 +544,17 @@ footer {
     height: 2.4rem;
     width: 20rem;
     align-self: center;
+    border: 0;
+}
+
+input:hover, input:active, input:focus{
+    border:0;
+    border-bottom: .3rem #ea3a5a solid;
+}
+
+input:invalid {
+    border: .3rem solid red !important;
+    background: rgb(255, 226, 226) !important;
 }
 
 .button {
@@ -567,7 +589,7 @@ footer {
 
 .slider > .content {
     position: relative;
-    height: 400px;
+    height: 40rem;
 }
 
 #prev-slide, #next-slide {
@@ -588,11 +610,11 @@ footer {
 }
 
 #prev-slide {
-    left: 16px;
+    left: 1.6rem;
 }
 
 #next-slide {
-    right: 16px;
+    right: 1.6rem;
 }
 
 #img1 {
@@ -625,11 +647,156 @@ footer {
 
 .hidden-img {
     opacity: 0;
-    transition: opacity .3s;
+    transition: opacity .8s;
 }
 
 @media only screen and (max-width: 1020px) {
     .slider {
         display: none;
+    }
+}
+
+#pages{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-size: 1.4rem;
+    color:#666;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+}
+
+#pages span{
+     margin: 1rem 2rem;
+ }
+
+#pages span:first-child{
+    margin-left: 5rem;
+}
+
+#pages span:hover {
+    color:#ea3a5a;
+    font-weight: bold;
+}
+
+.current{
+    font-size: 2rem;
+    color:#ea3a5a;
+    font-weight: bold;
+}
+
+.mobile-nav {
+    width: 100%;
+    height: 40px;
+    top: 0;
+    left: 0;
+    background: #212121;
+    color: white;
+    position: fixed;
+    display: none;
+
+    font-size: 1.4rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+#side-opener {
+    padding-top: 6px;
+    width: 60px;
+    height: 32px;
+    line-height: 34px;
+
+    text-align: center;
+
+    background: #363636;
+}
+
+#menu-opener {
+    font-family: 'Google Sans';
+    text-align: center;
+    line-height: 40px;
+    flex-grow: 1;
+}
+
+#slide-left-menu, #slide-top-menu {
+    display: none;
+}
+
+#slide-top-menu {
+    top: -400px;
+    z-index: 500;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    transition: top .3s;
+    -webkit-transition: top .3s;
+}
+
+#slide-left-menu {
+    top: 40px;
+    z-index: 490;
+    width: 200px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    background: white;
+
+    transition: left .3s;
+    -webkit-transition: left .3s;
+}
+
+#slide-left-menu li:hover{
+    background: #bbbbbb;
+}
+
+#slide-left-menu li{
+    font-size: 1.2rem;
+    margin: 0;
+    height: 15px;
+    padding: 8px;
+    line-height: 15px;
+    color: black;
+    border-bottom: 1px solid #777;
+    transition: background .3s;
+    -webkit-transition: background .3s;
+}
+
+#le-menu li{
+    font-size: 2rem;
+    margin: 0;
+    height: 30px;
+    padding: 16px;
+    line-height: 30px;
+    background: #212121;
+    color: white;
+    border-bottom: 1px solid #777;
+    transition: background .3s;
+    -webkit-transition: background .3s;
+}
+
+#slide-top-menu li:hover{
+    background: #363636;
+}
+
+#left-fade, #menu-fade {
+    position: fixed;
+    z-index: 400;
+    background: black;
+    opacity: .5;
+    display: none;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+@media only screen and (max-width: 1020px) {
+    #slide-top-menu, #slide-left-menu {
+        display: block;
+        position: fixed;
     }
 }

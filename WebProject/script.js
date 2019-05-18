@@ -16,12 +16,12 @@ email.addEventListener("input", validateEmail);
 let message = document.getElementById("message");
 message.addEventListener("input", validateMessage);
 
-window.onload = function () {
-    feedbackForm.reset();
-};
-
 function validateFeedbackForm(event) {
     if (!validateName() || !validatePhone() || !validateEmail() || !validateMessage()) {
+        name.required = true;
+        phone.required = true;
+        email.required = true;
+        message.required = true;
         alert("Fill form correct!");
     } else {
         hideFeedbackForm();
@@ -74,6 +74,11 @@ function showFeedbackForm(event) {
 }
 
 function hideFeedbackForm(event) {
+    name.required = false;
+    phone.required = false;
+    email.required = false;
+    message.required = false;
+
     fade.style.display = "none";
     feedbackForm.style.display = "none";
     feedbackForm.reset();
@@ -86,32 +91,30 @@ let images = [
     document.getElementById('img2'),
     document.getElementById('img3'),
     document.getElementById('img4'),
-    document.getElementById('img5')
 ];
 
 window.onload = async function () {
-    for (; true;) {
+    feedbackForm.reset();
+    while (true) {
         changeSlide(true);
-        await sleep(4000);
+        await sleep(4600);
     }
 };
 
-function changeSlide(isNext) {
+async function changeSlide(isNext) {
     images[imageNumber].style.opacity = '0';
 
     if (isNext) {
-        if (imageNumber === 4)
+        if (imageNumber === 3)
             imageNumber = 0;
         else imageNumber++;
     } else {
         if (imageNumber === 0)
-            imageNumber = 4;
+            imageNumber = 3;
         else imageNumber--;
     }
-
+    await sleep(600);
     images[imageNumber].style.opacity = '1';
-
-    console.log(imageNumber);
 }
 
 function sleep(ms) {
@@ -126,30 +129,57 @@ document.getElementById('next-slide').onclick = function () {
     changeSlide(true);
 };
 
-let items = [
-    {img: 'src/tea1.jpg', price: 10, name: "Name"},
-    {img: 'src/tea1.jpg', price: 10, name: "Name"},
-    {img: 'src/tea1.jpg', price: 10, name: "Name"},
-    {img: 'src/tea1.jpg', price: 10, name: "Name"},
-    {img: 'src/tea1.jpg', price: 10, name: "Name"},
-    {img: 'src/tea1.jpg', price: 10, name: "Name"},
-    {img: 'src/tea1.jpg', price: 10, name: "Name"},
-    {img: 'src/tea1.jpg', price: 10, name: "Name"},
-    {img: 'src/tea1.jpg', price: 10, name: "Name"},
-    {img: 'src/tea1.jpg', price: 10, name: "Name"},
-    {img: 'src/tea1.jpg', price: 10, name: "Name"},
-    {img: 'src/tea1.jpg', price: 10, name: "Name"},
-    {img: 'src/tea1.jpg', price: 10, name: "Name"},
-    {img: 'src/tea1.jpg', price: 10, name: "Name"},
-    {img: 'src/tea1.jpg', price: 10, name: "Name"},
-    {img: 'src/tea1.jpg', price: 10, name: "Name"},
-    {img: 'src/tea1.jpg', price: 10, name: "Name"},
-];
+let menuOpener = document.getElementById("menu-opener");
+let mobileMenu = document.getElementById("slide-top-menu");
 
-let currentIndex = 0;
-let itemsNumb=6;
+let leftOpener = document.getElementById("side-opener");
+let mobileLeft = document.getElementById("slide-left-menu");
 
-function setPages() {
-    var fullpages = Math.trunc(items.length / itemsNumb);
-    var kop = Math.trunc(( - hrn) * 100);
+var isVisibleLeft = false;
+var isVisibleMenu = false;
+
+let leftFade = document.getElementById("left-fade");
+let menuFade = document.getElementById("menu-fade");
+
+menuFade.addEventListener("click", closeMenu);
+leftFade.addEventListener("click", closeLeft);
+
+menuOpener.addEventListener("click", () => {
+    closeLeft();
+    if (isVisibleMenu)
+        closeMenu();
+    else
+        openMenu();
+});
+
+leftOpener.addEventListener("click", () => {
+    closeMenu();
+    if (isVisibleLeft)
+        closeLeft();
+    else
+        openLeft();
+});
+
+function openMenu() {
+    isVisibleMenu = true;
+    menuFade.style.display = "block";
+    mobileMenu.style.top = "40px";
+}
+
+function closeMenu() {
+    isVisibleMenu = false;
+    menuFade.style.display = "none";
+    mobileMenu.style.top = "-400px";
+}
+
+function openLeft() {
+    isVisibleLeft = true;
+    leftFade.style.display = "block";
+    mobileLeft.style.left = "0";
+}
+
+function closeLeft() {
+    isVisibleLeft = false;
+    leftFade.style.display = "none";
+    mobileLeft.style.left = "-220px";
 }
