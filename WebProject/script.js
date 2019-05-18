@@ -129,6 +129,7 @@ document.getElementById('next-slide').onclick = function () {
     changeSlide(true);
 };
 
+/*
 let menuOpener = document.getElementById("menu-opener");
 let mobileMenu = document.getElementById("slide-top-menu");
 
@@ -183,3 +184,4 @@ function closeLeft() {
     leftFade.style.display = "none";
     mobileLeft.style.left = "-220px";
 }
+*/

@@ -587,9 +587,15 @@ input:invalid {
     align-self: center;
 }
 
+.slider{
+    justify-self: center;
+    align-self: center;
+}
+
 .slider > .content {
     position: relative;
     height: 40rem;
+    width: 100rem;
 }
 
 #prev-slide, #next-slide {
@@ -799,4 +805,48 @@ input:invalid {
         display: block;
         position: fixed;
     }
+}
+
+.delivery-main, .payment-main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    -webkit-box-shadow: 0 .7rem 1rem #666;
+    -moz-box-shadow: 0 .7rem 1rem #666;
+    box-shadow: 0 .7rem 1rem #666;
+
+    margin: 2rem;
+    padding: 2rem;
+
+    font-size: 1.4rem;
+}
+
+.delivery-main .material-icons, .payment-main .material-icons{
+    float: left;
+    display: inline-block;
+    color: #ea3a5a;
+}
+
+
+.delivery div, .payment div {
+    padding:2rem;
+}
+
+.delivery + .delivery, .payment+.payment{
+    border-top: .3rem #ea3a5a solid;
+}
+
+.delivery-main h1, .payment-main h1{
+    font-size: 3rem;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: #ea3a5a;
+}
+
+h3{
+    font-size: 2.4rem;
+    float: left;
+    display: inline-block;
+    width: 100%;
 }
