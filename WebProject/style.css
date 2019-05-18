@@ -2,6 +2,8 @@ html {
     width: 100%;
     font-size: 62.5%;
     text-rendering: optimizeLegibility;
+
+    min-width: 100px;
 }
 
 body {
@@ -376,14 +378,20 @@ footer {
 
 @media screen and (max-width: 1000px) {
 
+    header {
+        height: 25rem;
+
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
     .main, .mid {
         width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-content: center;
+        align-content: space-evenly;
     }
-
 
     .left-block {
         order: 2;
@@ -414,7 +422,7 @@ footer {
     #hidden-menu {
         display: block;
         position: relative;
-        margin-top: 2rem;
+        align-self: center;
     }
 
     .menu-items {
@@ -422,8 +430,15 @@ footer {
     }
 
     .menu {
+        height: 5rem;
+        border-bottom: .2rem #ea3a5a solid;
+        position: fixed;
+
         display: flex;
         justify-content: center;
+        align-content: flex-start;
+
+        z-index: 10;
     }
 
     .phones {
@@ -880,14 +895,13 @@ h3 {
         justify-content: space-around;
     }
 
-    .info-left, .info-right
-    {
+    .info-left, .info-right {
         width: 100%;
         padding: 0;
         border: 0;
     }
 
-    .info-left{
+    .info-left {
         padding-bottom: 2rem;
         border-bottom: .3rem #ea3a5a solid;
     }

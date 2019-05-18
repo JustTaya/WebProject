@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
     <title>Teacup</title>
     <link rel="icon" href="src/TeaCup.svg">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -10,60 +11,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<header>
-    <div class="company">
-        <img class="logo" src="src/TeaCup_circle1.svg" alt="Logo">
-        <div class="name-slogan">
-            <h1 class="name">Teacup</h1>
-            <span class="slogan">Best tea company</span>
-        </div>
-    </div>
-    <div class="phones">
-        <div class="phone">+7(499)777-77-77</div>
-        <div class="phone">+7(499)777-77-77</div>
-        <div id="feedback-button" class="feedback underlined">Обратная связь</div>
-    </div>
-</header>
-<div class="menu">
-    <div class="menu-items" id="hidden-menu">
-        <i class="material-icons">
-            menu
-        </i>
-        <span class="menu-item">Меню</span>
-    </div>
-    <ul class="menu-items">
-        <li>
-            <i class="material-icons">
-                home
-            </i>
-            <span class="menu-item">Главная</span>
-        </li>
-        <li>
-            <i class="material-icons">
-                library_books
-            </i>
-            <span class="menu-item">Каталог</span>
-        </li>
-        <li>
-            <i class="material-icons">
-                local_shipping
-            </i>
-            <span class="menu-item">Доставка и оплата</span>
-        </li>
-        <li>
-            <i class="material-icons">
-                list
-            </i>
-            <span class="menu-item">Прайс-лист</span>
-        </li>
-        <li>
-            <i class="material-icons">
-                contacts
-            </i>
-            <span class="menu-item">Контакты</span>
-        </li>
-    </ul>
-</div>
+<script src="./components/header.js" charset="utf-8"></script>
 <!--
 <ul id="hidden-menu-items">
     <li>
@@ -84,17 +32,8 @@
 </ul>
 -->
 <div class="mid">
-    <div class="slider">
-        <div class="content">
-            <button id="prev-slide">&lt;</button>
-            <div id="img1" class="hidden-img"></div>
-            <div id="img2" class="hidden-img"></div>
-            <div id="img3" class="hidden-img"></div>
-            <div id="img4" class="hidden-img"></div>
-            <div id="img5" class="hidden-img"></div>
-            <button id="next-slide">&gt;</button>
-        </div>
-    </div>
+    <script src="./components/slider.js" charset="utf-8"></script>
+
     <div class="path">
         <span class="path-element underlined">Главная</span>
         <span class="path-element underlined">Каталог</span>
@@ -158,8 +97,8 @@
                 <div class="product"></div>
                 <div class="product"></div>
                 <div class="product"></div>
-                <div class="product hidden"></div>
-                <div class="product hidden"></div>
+                <div class="product"></div>
+                <div class="product"></div>
             </div>
             <div id="pages">
                 <span class="current">1</span>
@@ -208,36 +147,8 @@
         </div>
     </div>
 </div>
-<footer>
-    <div class="footer-company">
-        <p class="footer-name">© 2018-2019 ЗАО Teacup™</p>
-        <p class="footer-email">info@name.ru</p>
-    </div>
-    <ul class="footer-menu">
-        <li class="menu-main underlined">Главная</li>
-        <li class="catalog-main underlined">Каталог</li>
-        <li class="delivery-main underlined">Доставка и оплата</li>
-        <li class="price-main underlined">Прайс-лист</li>
-        <li class="contacts-main underlined">Контакты</li>
-    </ul>
-    <div class="developer-info">
-        <p class="underlined">Разработка сайта —</p>
-        <p>Таисия Величко</p>
-    </div>
-</footer>
-<div id="fade"></div>
-<form id="feedback-form">
-    <h1>Обратная связь</h1>
-    <label for="name">Ваше имя</label>
-    <input placeholder="Name: >4 letters" type="text" id="name" minlength="4">
-    <label for="phone">Телефон</label>
-    <input placeholder="Format: 095-777-7777" type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
-    <label for="email">Email</label>
-    <input placeholder="mail@mail.mail" type="email" id="email">
-    <label for="message">Сообщение</label>
-    <textarea id="message"></textarea>
-    <div class="button" id="submit-button">Отправить</div>
-</form>
+<script src="./components/footer.js" charset="utf-8"></script>
+<script src="components/feedbackForm.js" charset="utf-8"></script>
 </body>
 <script src="script.js"></script>
 </html>
