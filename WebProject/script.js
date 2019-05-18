@@ -125,3 +125,31 @@ document.getElementById('prev-slide').onclick = function () {
 document.getElementById('next-slide').onclick = function () {
     changeSlide(true);
 };
+
+let items = [
+    {img: 'src/tea1.jpg', price: 10, name: "Name"},
+    {img: 'src/tea1.jpg', price: 10, name: "Name"},
+    {img: 'src/tea1.jpg', price: 10, name: "Name"},
+    {img: 'src/tea1.jpg', price: 10, name: "Name"},
+    {img: 'src/tea1.jpg', price: 10, name: "Name"},
+    {img: 'src/tea1.jpg', price: 10, name: "Name"},
+    {img: 'src/tea1.jpg', price: 10, name: "Name"},
+    {img: 'src/tea1.jpg', price: 10, name: "Name"},
+    {img: 'src/tea1.jpg', price: 10, name: "Name"},
+    {img: 'src/tea1.jpg', price: 10, name: "Name"},
+    {img: 'src/tea1.jpg', price: 10, name: "Name"},
+    {img: 'src/tea1.jpg', price: 10, name: "Name"},
+    {img: 'src/tea1.jpg', price: 10, name: "Name"},
+    {img: 'src/tea1.jpg', price: 10, name: "Name"},
+    {img: 'src/tea1.jpg', price: 10, name: "Name"},
+    {img: 'src/tea1.jpg', price: 10, name: "Name"},
+    {img: 'src/tea1.jpg', price: 10, name: "Name"},
+];
+
+let currentIndex = 0;
+let itemsNumb=6;
+
+function setPages() {
+    var fullpages = Math.trunc(items.length / itemsNumb);
+    var kop = Math.trunc(( - hrn) * 100);
+}
