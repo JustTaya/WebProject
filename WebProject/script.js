@@ -1,9 +1,13 @@
 let feedbackButton = document.getElementById("feedback-button");
+let hiddenFeedback=document.getElementById("hidden-feedback");
 let fade = document.getElementById("fade");
 let feedbackForm = document.getElementById("feedback-form");
 let submitButton = document.getElementById("submit-button");
 
 feedbackButton.addEventListener("click", showFeedbackForm);
+hiddenFeedback.addEventListener("click", showFeedbackForm);
+hiddenFeedback.addEventListener("click",showMenu);
+
 fade.addEventListener("click", hideFeedbackForm);
 submitButton.addEventListener("click", validateFeedbackForm);
 
@@ -134,6 +138,12 @@ let menu = document.getElementById("menu-items");
 hiddenMenu.addEventListener("click", showMenu);
 let menuOpened = false;
 
+let leftButton=document.getElementById("hidden-left-menu");
+let left=document.getElementById("left-menu");
+let leftOpen=false;
+
+leftButton.addEventListener("click", showLeft);
+
 function showMenu(event) {
     if (menuOpened) {
         menu.style.marginTop = '-400px';
@@ -141,22 +151,19 @@ function showMenu(event) {
     } else {
         menu.style.marginTop = '20px';
         menuOpened = true;
+        if(leftOpen)
+            showLeft();
     }
 }
 
-let leftButton=document.getElementById("hidden-left-menu");
-let left=document.getElementById("left-menu");
-let leftOpen=false;
-
-leftButton.addEventListener("click", showLeft);
-
 function showLeft(event) {
-    console.log('ы');
     if (leftOpen) {
         left.style.marginLeft = '-500px';
         leftOpen = false;
     } else {
         left.style.marginLeft = '20px';
         leftOpen = true;
+        if(menuOpened)
+            showMenu();
     }
 }

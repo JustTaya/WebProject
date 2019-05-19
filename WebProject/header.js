@@ -110,6 +110,9 @@ document.write(`<header>
             <span class="menu-item">Контакты</span>
             </a>
         </li>
+        <li>
+            <span class="menu-item" id="hidden-feedback">Обратная связь</span>
+        </li>
     </ul>
     
             <ul id="left-menu">
