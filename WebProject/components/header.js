@@ -14,7 +14,7 @@ document.write(`<header>
 </header>
 
 <div class="menu">
-    <div class="menu-items" id="hidden-menu">
+    <div id="hidden-menu">
         <i class="material-icons">
             menu
         </i>
@@ -53,4 +53,37 @@ document.write(`<header>
         </li>
     </ul>
 </div>
+
+    <ul id="menu-items">
+        <li>
+            <i class="material-icons">
+                home
+            </i>
+            <span class="menu-item">Главная</span>
+        </li>
+        <li>
+            <i class="material-icons">
+                library_books
+            </i>
+            <span class="menu-item">Каталог</span>
+        </li>
+        <li>
+            <i class="material-icons">
+                local_shipping
+            </i>
+            <span class="menu-item">Доставка и оплата</span>
+        </li>
+        <li>
+            <i class="material-icons">
+                list
+            </i>
+            <span class="menu-item">Прайс-лист</span>
+        </li>
+        <li>
+            <i class="material-icons">
+                contacts
+            </i>
+            <span class="menu-item">Контакты</span>
+        </li>
+    </ul>
 `);

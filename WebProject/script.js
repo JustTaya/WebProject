@@ -129,59 +129,17 @@ document.getElementById('next-slide').onclick = function () {
     changeSlide(true);
 };
 
-/*
-let menuOpener = document.getElementById("menu-opener");
-let mobileMenu = document.getElementById("slide-top-menu");
+let hiddenMenu = document.getElementById("hidden-menu");
+let menu = document.getElementById("menu-items");
+hiddenMenu.addEventListener("click", showMenu);
+let menuOpened = false;
 
-let leftOpener = document.getElementById("side-opener");
-let mobileLeft = document.getElementById("slide-left-menu");
-
-var isVisibleLeft = false;
-var isVisibleMenu = false;
-
-let leftFade = document.getElementById("left-fade");
-let menuFade = document.getElementById("menu-fade");
-
-menuFade.addEventListener("click", closeMenu);
-leftFade.addEventListener("click", closeLeft);
-
-menuOpener.addEventListener("click", () => {
-    closeLeft();
-    if (isVisibleMenu)
-        closeMenu();
-    else
-        openMenu();
-});
-
-leftOpener.addEventListener("click", () => {
-    closeMenu();
-    if (isVisibleLeft)
-        closeLeft();
-    else
-        openLeft();
-});
-
-function openMenu() {
-    isVisibleMenu = true;
-    menuFade.style.display = "block";
-    mobileMenu.style.top = "40px";
+function showMenu(event) {
+    if (menuOpened) {
+        menu.style.marginTop = '-400px';
+        menuOpened = false;
+    } else {
+        menu.style.marginTop = '20px';
+        menuOpened = true;
+    }
 }
-
-function closeMenu() {
-    isVisibleMenu = false;
-    menuFade.style.display = "none";
-    mobileMenu.style.top = "-400px";
-}
-
-function openLeft() {
-    isVisibleLeft = true;
-    leftFade.style.display = "block";
-    mobileLeft.style.left = "0";
-}
-
-function closeLeft() {
-    isVisibleLeft = false;
-    leftFade.style.display = "none";
-    mobileLeft.style.left = "-220px";
-}
-*/
