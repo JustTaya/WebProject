@@ -143,3 +143,20 @@ function showMenu(event) {
         menuOpened = true;
     }
 }
+
+let leftButton=document.getElementById("hidden-left-menu");
+let left=document.getElementById("left-menu");
+let leftOpen=false;
+
+leftButton.addEventListener("click", showLeft);
+
+function showLeft(event) {
+    console.log('ы');
+    if (leftOpen) {
+        left.style.marginLeft = '-500px';
+        leftOpen = false;
+    } else {
+        left.style.marginLeft = '20px';
+        leftOpen = true;
+    }
+}
